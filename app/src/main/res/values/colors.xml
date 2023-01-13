@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#008000</color>
+    <color name="yellow">#fdd102</color>
+    <color name="color_salon_detail1">#7094FF</color>
+    <color name="color_salon_detail2">#41E1A9</color>
+    <color name="color_salon_detail3">#C45DE1</color>
+    <color name="color_salon_detail4">#DD3F3F</color>
+    <color name="color_salon_detail5">#00D546</color>
+    <color name="primary_1">#fdd102</color>
+    <color name="secondary_1">#342019</color>
+    <color name="secondary_light_1">#7C5F55</color>
+    <color name="white_light">#CACACA</color>
+    <color name="royal_blue">#4169e1</color>
+    <color name="royal_blue_light">#7094FF</color>
+</resources>

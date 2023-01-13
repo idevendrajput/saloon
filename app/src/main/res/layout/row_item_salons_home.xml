@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="#F0FAFF"
+    android:background="@drawable/rounded_bg_15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:riv_corner_radius="10dp"
+        android:id="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/slider1"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Asha Fresh look"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:fontFamily="@font/futura_medium"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:id="@+id/salonName"
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintTop_toBottomOf="@+id/salonName"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        android:rating="3"
+        android:numStars="5"
+        android:id="@+id/rating"
+        android:progressTint="@android:color/holo_orange_light"
+        android:secondaryProgressTint="@android:color/holo_orange_light"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Services"
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        android:maxLines="1"
+        android:textSize="10sp"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_marginTop="3dp"
+        android:id="@+id/services"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

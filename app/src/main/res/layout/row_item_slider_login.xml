@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentDescription="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black_bottom"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
+        android:text="Tag"
+        android:id="@+id/tag"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_above="@+id/title"
+        android:layout_marginStart="15dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="150dp"
+        android:id="@+id/title"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="This is title"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="View More From Salon"
+        android:id="@+id/viewMore"
+        android:icon="@drawable/gallery_16" >
+    </item>
+
+</menu>

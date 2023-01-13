@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/card"
+        android:layout_marginStart="-15dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men's Salon"
+                android:textSize="12sp"
+                android:fontFamily="@font/futura_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/salonName"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                app:layout_constraintTop_toBottomOf="@+id/salonName"
+                android:rating="4"
+                android:secondaryProgressTint="@android:color/holo_orange_light"
+                android:progressTint="@android:color/holo_orange_light"
+                android:id="@+id/rating"
+                app:layout_constraintStart_toStartOf="@+id/salonName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Starting From"
+                android:textSize="8sp"
+                android:fontFamily="@font/open_sans_light"
+                android:id="@+id/txtStartingFrom"
+                app:layout_constraintTop_toBottomOf="@+id/rating"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="@+id/salonName"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="432₹"
+                app:layout_constraintStart_toStartOf="@+id/salonName"
+                app:layout_constraintTop_toBottomOf="@+id/txtStartingFrom"
+                android:textSize="14sp"
+                android:fontFamily="@font/futura_medium"
+                android:id="@+id/startingPrice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Haircut, massage...)"
+                android:textSize="10sp"
+                android:id="@+id/services"
+                android:maxLines="3"
+                android:fontFamily="@font/open_sans_light"
+                app:layout_constraintStart_toStartOf="@+id/salonName"
+                app:layout_constraintTop_toBottomOf="@+id/startingPrice"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book"
+                android:textStyle="bold"
+                android:id="@+id/book"
+                android:textSize="10sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:textColor="@color/secondary_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/services"
+                tools:ignore="SmallSp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/slider1"
+        app:riv_corner_radius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        android:layout_marginVertical="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..4Km.."
+        android:id="@+id/distance"
+        android:textColor="@color/secondary_1"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

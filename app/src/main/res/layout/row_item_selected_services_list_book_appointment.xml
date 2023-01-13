@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/futura_medium"
+    android:background="@drawable/rounded_bg_5"
+    android:layout_margin="7dp"
+    android:backgroundTint="#EBFCFF"
+    android:padding="7dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/futura_medium"
+        android:text="Hair style"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/serviceName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200₹"
+        android:fontFamily="@font/open_sans_light"
+        android:textSize="12sp"
+        android:textColor="@color/green"
+        android:id="@+id/servicePrice"
+        />
+
+</LinearLayout>

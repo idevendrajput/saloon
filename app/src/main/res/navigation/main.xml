@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.dr.saloon.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.dr.saloon.fragments.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+
+
+    <fragment
+        android:id="@+id/searchCities"
+        android:name="com.dr.saloon.fragments.SearchCities"
+        android:label="fragment_search_cities"
+        tools:layout="@layout/fragment_search_cities" />
+
+    <fragment
+        android:id="@+id/wishList"
+        android:name="com.dr.saloon.fragments.wishlist.WishList"
+        android:label="fragement_wishlist"
+        tools:layout="@layout/fragement_wishlist" />
+    <fragment
+        android:id="@+id/allSalon"
+        android:name="com.dr.saloon.fragments.salons.AllSalon"
+        android:label="fragment_all_services"
+        tools:layout="@layout/fragment_all_services" />
+
+    <fragment
+        android:id="@+id/gallery"
+        android:name="com.dr.saloon.fragments.gallery.Gallery"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.dr.saloon.notifications.Notifications"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.dr.saloon.fragments.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/topSalon"
+        android:name="com.dr.saloon.fragments.salons.TopSalon"
+        android:label="fragment_top_salon"
+        tools:layout="@layout/fragment_top_salon" />
+    <fragment
+        android:id="@+id/salonAllReview"
+        android:name="com.dr.saloon.fragments.salons.SalonAllReview"
+        android:label="fragment_all_reviews"
+        tools:layout="@layout/fragment_all_reviews" />
+    <fragment
+        android:id="@+id/bookAppointment"
+        android:name="com.dr.saloon.fragments.appointments.BookAppointment"
+        android:label="fragment_book_appointment"
+        tools:layout="@layout/fragment_book_appointment" />
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.dr.saloon.fragments.auth.EditProfile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/informations"
+        android:name="com.dr.saloon.fragments.auth.Informations"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/likedGalleryPhotos"
+        android:name="com.dr.saloon.fragments.gallery.LikedGalleryPhotos"
+        android:label="fragment_liked_gallery_photos"
+        tools:layout="@layout/fragment_liked_gallery_photos" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.dr.saloon.fragments.auth.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/myAppointments"
+        android:name="com.dr.saloon.fragments.appointments.MyAppointments"
+        android:label="fragment_my_appointments"
+        tools:layout="@layout/fragment_my_appointments" />
+    <fragment
+        android:id="@+id/myPayments"
+        android:name="com.dr.saloon.payments.MyPayments"
+        android:label="fragment_my_payments"
+        tools:layout="@layout/fragment_my_payments" />
+    <fragment
+        android:id="@+id/openPhoto"
+        android:name="com.dr.saloon.fragments.gallery.OpenPhoto"
+        android:label="fragment_open_photo"
+        tools:layout="@layout/fragment_open_photo" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.dr.saloon.fragments.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/referAndEarn"
+        android:name="com.dr.saloon.refer.ReferAndEarn"
+        android:label="fragment_refer_and_earn"
+        tools:layout="@layout/fragment_refer_and_earn" />
+    <activity
+        android:id="@+id/paymentActivity"
+        android:name="com.dr.saloon.payments.PaymentActivity"
+        android:label="activity_payment"
+        tools:layout="@layout/activity_payment" />
+    <fragment
+        android:id="@+id/salonByLocation"
+        android:name="com.dr.saloon.fragments.salons.SalonByLocation"
+        android:label="fragment_salon_by_location"
+        tools:layout="@layout/fragment_salon_by_location" />
+    <fragment
+        android:id="@+id/salonsByServicesFilter"
+        android:name="com.dr.saloon.fragments.salons.SalonsByServicesFilter"
+        android:label="fragment_salon_by_service_filter"
+        tools:layout="@layout/fragment_salon_by_service_filter" />
+    <fragment
+        android:id="@+id/salonDetails"
+        android:name="com.dr.saloon.fragments.salons.SalonDetails"
+        android:label="fragment_salon_details"
+        tools:layout="@layout/fragment_salon_details" />
+    <fragment
+        android:id="@+id/myEarnings"
+        android:name="com.dr.saloon.refer.MyEarnings"
+        android:label="fragments_my_earnings"
+        tools:layout="@layout/fragments_my_earnings" />
+    <fragment
+        android:id="@+id/salonsGallery"
+        android:name="com.dr.saloon.fragments.gallery.SalonsGallery"
+        android:label="fragment_salon_gallery"
+        tools:layout="@layout/fragment_salon_gallery" />
+    <fragment
+        android:id="@+id/salonSearch"
+        android:name="com.dr.saloon.fragments.salons.SalonSearch"
+        android:label="fragment_salon_search"
+        tools:layout="@layout/fragment_salon_search" />
+    <fragment
+        android:id="@+id/allServices"
+        android:name="com.dr.saloon.fragments.services.AllServices"
+        tools:layout="@layout/fragment_all_services"
+        android:label="AllServices" />
+    <fragment
+        android:id="@+id/allServiceOfSalon"
+        android:name="com.dr.saloon.fragments.services.AllServiceOfSalon"
+        tools:layout="@layout/fragment_all_services_of_salon"
+        android:label="AllServiceOfSalon" />
+    <fragment
+        android:id="@+id/policyViewer"
+        android:name="com.dr.saloon.fragments.PolicyViewer"
+        android:label="PolicyViewer" />
+
+</navigation>

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:background="@color/secondary_1"
+    tools:context="com.dr.saloon.fragments.salons.SalonDetails">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:id="@+id/nestedSv"
+        android:scrollbarThumbVertical="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_left_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:contentDescription="@null"
+                android:layout_marginTop="20dp"
+                android:alpha="0.5"
+                app:elevation="1dp"
+                android:layout_marginStart="20dp"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/white"
+                android:id="@+id/viewPager2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_bg"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textSize="12sp"
+                android:id="@+id/salonType"
+                android:fontFamily="@font/open_sans_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager2"
+                android:layout_margin="15dp"
+                android:backgroundTint="#E3E3E3"
+                android:drawablePadding="5dp"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Services offered by\n------"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:fontFamily="@font/futura_medium"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:id="@+id/txtServicesOfferedBy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approval Pending"
+                android:textColor="@color/black"
+                android:id="@+id/approvalStatus"
+                android:fontFamily="@font/futura_medium"
+                android:drawablePadding="7dp"
+                android:visibility="gone"
+                android:layout_marginTop="7dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtServicesOfferedBy"
+                android:background="@drawable/rounded_bg_5"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:drawableStartCompat="@drawable/clock_16" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/secondary_1"
+                android:text="Respond"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/approvalStatus"
+                android:id="@+id/respond"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@color/secondary_1"
+                android:text="Direction"
+                android:id="@+id/direction"
+                app:icon="@drawable/ic_baseline_directions_24"
+                app:iconTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cornerRadius="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="-22.5dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respond"
+                tools:listitem="@layout/row_item_salon_inside_horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:id="@+id/rvServices"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:background="@drawable/rounded_bg"
+                app:layout_constraintTop_toBottomOf="@+id/rvServices"
+                app:layout_constraintStart_toStartOf="@+id/rvServices"
+                android:paddingHorizontal="7dp"
+                android:textSize="12sp"
+                android:paddingVertical="3dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="5dp"
+                android:id="@+id/timing"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All Services"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvServices"
+                android:textColor="@color/white"
+                android:id="@+id/viewAllServices"
+                android:drawablePadding="7dp"
+                android:gravity="center"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/futura_medium"
+                app:drawableTint="@color/white"
+                app:drawableEndCompat="@drawable/ic_round_arrow_forward_24" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toBottomOf="@+id/viewAllServices"
+                android:src="@drawable/favourite_32"
+                app:layout_constraintEnd_toEndOf="@+id/viewAllServices"
+                android:layout_margin="15dp"
+                app:tint="@color/white"
+                android:id="@+id/addToWishList"
+                android:contentDescription="@null"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Average Rating"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                android:fontFamily="@font/open_sans_light"
+                android:id="@+id/txtAverageRating"
+                app:layout_constraintTop_toBottomOf="@+id/timing"
+                android:textColor="@color/white"
+                android:drawablePadding="3dp"
+                android:gravity="center|start"
+                app:drawableTint="@color/white"
+                app:drawableStartCompat="@drawable/star_10"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                android:layout_marginTop="7dp" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                app:layout_constraintTop_toBottomOf="@+id/txtAverageRating"
+                android:rating="5"
+                android:id="@+id/ratingAverage"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                android:progressTint="@android:color/holo_orange_light"
+                android:progressBackgroundTint="@android:color/holo_orange_light"
+                android:secondaryProgressTint="@android:color/holo_orange_light"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/open_sans_light"
+                android:gravity="center|start"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                app:drawableStartCompat="@drawable/at_10"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintTop_toBottomOf="@+id/ratingAverage" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="xyz@gmail.com"
+                app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/email"
+                android:textSize="14sp"  />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/open_sans_light"
+                android:gravity="center|start"
+                android:text="Phone"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                app:drawableStartCompat="@drawable/phone_call_10"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintTop_toBottomOf="@+id/email"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="*****"
+                app:layout_constraintTop_toBottomOf="@+id/txtPhone"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/phone"
+                android:textSize="14sp"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                android:id="@+id/txtAddress"
+                android:fontFamily="@font/open_sans_light"
+                app:layout_constraintTop_toBottomOf="@+id/phone"
+                android:textColor="@color/white"
+                android:drawablePadding="3dp"
+                android:gravity="center|start"
+                app:drawableTint="@color/white"
+                app:drawableStartCompat="@drawable/marker_24"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                android:layout_marginTop="7dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Xyz Market, Sikar, Rajasthan 332001"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddress"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/address"
+                android:textSize="14sp"   />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="More About Asha Fresh Look"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                android:maxLines="1"
+                android:id="@+id/txtMoreDetail"
+                android:fontFamily="@font/open_sans_light"
+                app:layout_constraintTop_toBottomOf="@+id/address"
+                android:textColor="@color/white"
+                android:drawablePadding="3dp"
+                android:gravity="center|start"
+                app:drawableTint="@color/white"
+                app:drawableStartCompat="@drawable/ic_more_10"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="@+id/txtServicesOfferedBy"
+                android:layout_marginTop="7dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Xyz Market, Sikar, Rajasthan 332001"
+                app:layout_constraintTop_toBottomOf="@+id/txtMoreDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/txtGallery"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/moreDetails"
+                android:padding="7dp"
+                android:background="@drawable/bg_strock_1dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Asha's gallery"
+                app:layout_constraintTop_toBottomOf="@+id/moreDetails"
+                android:textSize="15sp"
+                android:id="@+id/txtGallery"
+                android:textColor="@color/white"
+                android:drawablePadding="7dp"
+                android:gravity="center|start"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15sp"
+                android:visibility="gone"
+                android:fontFamily="@font/futura_medium"
+                app:drawableStartCompat="@drawable/gallery_16"
+                app:drawableTint="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_arrow_forward_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtGallery"
+                app:layout_constraintBottom_toBottomOf="@+id/txtGallery"
+                android:contentDescription="@null"
+                android:id="@+id/viewMoreGallery"
+                app:tint="@color/white"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtServicesOfferedBy"
+                app:layout_constraintTop_toBottomOf="@+id/txtGallery"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:listitem="@layout/row_item_gallery_salon_detail" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvGallery"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/layout_customer_reviews"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cornerRadius="10dp"
+        android:text="Book An Appointment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        android:id="@+id/bookAppointment"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/secondary_1"
+        app:icon="@drawable/calendar_black_64"
+        app:iconTint="@color/secondary_1"
+        android:fontFamily="@font/futura_medium"
+        app:iconGravity="textStart"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

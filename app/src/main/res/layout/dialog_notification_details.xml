@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_close"
+        android:padding="7dp"
+        android:background="@drawable/rounded_bg"
+        android:id="@+id/close"
+        android:contentDescription="@null"
+        android:layout_gravity="end"
+        />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_bg_15"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView"
+        app:riv_corner_radius="15dp"
+        />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31892908"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/dateTime"
+            />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31892908"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/black"
+            android:id="@+id/message"
+            />
+
+</LinearLayout>

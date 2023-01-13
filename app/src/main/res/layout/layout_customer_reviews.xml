@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarThumbVertical="@null"
+            android:overScrollMode="never">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="10dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/customer_reviews"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/futura_medium"
+                    android:textStyle="bold"
+                    android:drawablePadding="7sp"
+                    android:gravity="center"
+                    android:id="@+id/txtCustomerReviews"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:drawableStartCompat="@drawable/rate_24" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rvReviews"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCustomerReviews"
+                    tools:listitem="@layout/row_item_reviews"
+                    android:layout_marginTop="15dp"
+                    tools:itemCount="5"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Data"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCustomerReviews"
+                    android:layout_margin="50dp"
+                    android:id="@+id/noData"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_more"
+                    android:textSize="15sp"
+                    android:id="@+id/viewMore"
+                    app:layout_constraintTop_toBottomOf="@+id/rvReviews"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/futura_medium"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10sp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    app:drawableEndCompat="@drawable/ic_round_arrow_forward_24"
+                    app:drawableTint="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Write a review"
+                    app:layout_constraintTop_toBottomOf="@+id/viewMore"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/black"
+                    android:id="@+id/txtWriteAReview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    app:layout_constraintTop_toBottomOf="@+id/txtWriteAReview"
+                    android:progressTint="@android:color/holo_orange_light"
+                    android:secondaryProgressTint="@android:color/holo_orange_light"
+                    android:isIndicator="false"
+                    android:progressBackgroundTint="@android:color/holo_orange_light"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/rating"
+                    app:layout_constraintStart_toStartOf="@+id/rating"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:hint="Type here"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:padding="10dp"
+                    android:background="@color/white"
+                    android:id="@+id/etReview"
+                    android:inputType="textMultiLine"
+                    android:autofillHints="@null"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:id="@+id/submitReview"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@+id/etReview"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</merge>

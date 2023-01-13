@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="30dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cross_24"
+        android:padding="10dp"
+        android:layout_gravity="end"
+        android:contentDescription="@null"
+        android:background="@drawable/rounded_bg_15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="20sp"
+        android:fontFamily="@font/futura_medium"
+        app:layout_constraintTop_toBottomOf="@+id/close"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:id="@+id/txtPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:id="@+id/parentPhone"
+        app:hintTextColor="@color/black"
+        android:textColorHint="#F85E5E5E"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber"
+        android:focusableInTouchMode="true"
+        android:backgroundTint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        android:layout_marginTop="15dp"
+        app:boxStrokeErrorColor="@color/red"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone Number"
+            android:id="@+id/phoneNumber"
+            android:textColor="@color/black"
+            android:drawablePadding="10dp"
+            android:inputType="number"
+            android:textCursorDrawable="@drawable/cursor_black"
+            android:padding="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/parentPhone"
+        android:layout_marginVertical="15dp"
+        android:backgroundTint="@color/secondary_1"
+        android:text="Get Verification Code"
+        app:icon="@drawable/key_24"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"
+        app:iconGravity="textStart"
+        android:fontFamily="@font/futura_medium"
+        android:id="@+id/getVerificationCode"
+        />
+
+    <ProgressBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="@+id/getVerificationCode"
+        app:layout_constraintStart_toStartOf="@+id/getVerificationCode"
+        app:layout_constraintEnd_toEndOf="@+id/getVerificationCode"
+        app:layout_constraintBottom_toBottomOf="@+id/getVerificationCode"
+        android:indeterminateTint="@color/white"
+        android:id="@+id/pb1"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:id="@+id/parentOTP"
+        app:hintTextColor="@color/black"
+        android:visibility="gone"
+        android:textColorHint="#F85E5E5E"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/getVerificationCode"
+        android:focusableInTouchMode="true"
+        android:backgroundTint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        android:layout_marginTop="15dp"
+        app:boxStrokeErrorColor="@color/red"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Verification Code"
+            android:id="@+id/verificationCode"
+            android:textColor="@color/black"
+            android:drawablePadding="10dp"
+            android:inputType="number"
+            android:textCursorDrawable="@drawable/cursor_black"
+            android:padding="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/parentOTP"
+        android:layout_marginVertical="15dp"
+        android:backgroundTint="@color/secondary_1"
+        android:text="Verify"
+        android:visibility="gone"
+        app:icon="@drawable/shield_check_24"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"
+        app:iconGravity="textStart"
+        android:fontFamily="@font/futura_medium"
+        android:id="@+id/verify"
+        />
+
+    <ProgressBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="@+id/verify"
+        app:layout_constraintStart_toStartOf="@+id/verify"
+        app:layout_constraintEnd_toEndOf="@+id/verify"
+        app:layout_constraintBottom_toBottomOf="@+id/verify"
+        android:indeterminateTint="@color/white"
+        android:id="@+id/pb2"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

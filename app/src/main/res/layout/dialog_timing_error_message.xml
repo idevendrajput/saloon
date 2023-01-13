@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please pick the time between salon's working hours"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:id="@+id/title"
+        android:fontFamily="@font/futura_medium"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salon's working time 12:00 am to 7:00 pm"
+        android:textColor="@color/red"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/open_sans_light"
+        android:id="@+id/salonTiming"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        app:cornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/secondary_1"
+        android:textColor="@color/white"
+        android:id="@+id/done"
+        />
+
+</LinearLayout>

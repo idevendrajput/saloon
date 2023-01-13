@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="25dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cross_24"
+        android:padding="10dp"
+        android:layout_gravity="end"
+        android:contentDescription="@null"
+        android:background="@drawable/rounded_bg_15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Appointment"
+        android:textColor="@color/red"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please describe the reason of cancellation*"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:background="@drawable/rounded_bg_15"
+        android:backgroundTint="#FBF2F2"
+        android:hint="Type here..."
+        android:gravity="start|top"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:fontFamily="@font/futura_medium"
+        android:id="@+id/reason"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancellation Charge"
+        android:textColor="@color/secondary_1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/cancellationCharge"
+        android:fontFamily="@font/futura_medium"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Cancellation"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/secondary_1"
+            android:id="@+id/confirm"
+            />
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            android:id="@+id/pb"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

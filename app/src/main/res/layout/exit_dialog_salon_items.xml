@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="5dp"
+    app:strokeWidth="0dp"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black_bottom"
+        android:elevation="1dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/slider1"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:id="@+id/imageView"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="This is title"
+        android:textSize="8sp"
+        android:fontFamily="@font/open_sans_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="2dp"
+        android:maxLines="2"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/title"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4Km"
+        android:id="@+id/distance"
+        android:elevation="3dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/rounded_bg_15"
+        android:textSize="6sp"
+        android:paddingHorizontal="5dp"
+        tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

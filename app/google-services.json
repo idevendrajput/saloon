@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "587560240839",
+    "project_id": "vella-salon",
+    "storage_bucket": "vella-salon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587560240839:android:18071aa82143e7a57320e2",
+        "android_client_info": {
+          "package_name": "com.dr.saloon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587560240839-mhg50nvv7u4rduq8jioqn7qctvd1a9tk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dr.saloon",
+            "certificate_hash": "d97e3067d3b072eafe19bd83aec59440cc16aa7f"
+          }
+        },
+        {
+          "client_id": "587560240839-0a3nl390aojium5jiiloq2k4har3rr2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIxoAO7WjIReHiA_vYbP43dt85vAFG3Zs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587560240839-0a3nl390aojium5jiiloq2k4har3rr2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

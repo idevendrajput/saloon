@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.dr.saloon.fragments.salons.AllSalon">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/collapseLayout"
+        android:background="@drawable/bg_side_bar_services">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Women"
+            android:gravity="center"
+            android:rotation="90"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:textStyle="bold"
+            android:drawablePadding="7dp"
+            app:drawableStartCompat="@drawable/woman_16" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Men"
+            android:gravity="center"
+            android:rotation="90"
+            android:layout_weight="1"
+            android:textColor="@color/white_light"
+            android:textStyle="bold"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:textSize="12sp"
+            android:drawablePadding="7dp"
+            app:drawableStartCompat="@drawable/man_16" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Unisex"
+            android:gravity="center"
+            android:rotation="90"
+            android:layout_weight="1"
+            android:textColor="@color/white_light"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:drawablePadding="7dp"
+            app:drawableStartCompat="@drawable/unisex_16" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/angle_left_24"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@null"
+            android:id="@+id/CollapseSideBar"
+            android:padding="10dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:overScrollMode="never"
+        app:layout_constraintStart_toEndOf="@+id/collapseLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/angle_left_24"
+                    app:elevation="0dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/back"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@null" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/back"
+                    app:layout_constraintEnd_toStartOf="@+id/search"
+                    app:layout_constraintTop_toTopOf="@+id/back"
+                    app:layout_constraintBottom_toBottomOf="@+id/back"
+                    android:background="@color/white"
+                    android:textCursorDrawable="@drawable/cursor_black"
+                    android:hint="Search"
+                    android:id="@+id/etSearch"
+                    android:visibility="gone"
+                    android:paddingHorizontal="15dp"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/search_24"
+                    android:padding="5dp"
+                    android:id="@+id/search"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/back"
+                    app:layout_constraintBottom_toBottomOf="@+id/back"
+                    android:contentDescription="@null"
+                    android:layout_marginEnd="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Services for\nwomen"
+                    android:textStyle="bold"
+                    android:id="@+id/title"
+                    app:layout_constraintTop_toBottomOf="@+id/back"
+                    app:layout_constraintStart_toStartOf="@+id/back"
+                    android:fontFamily="@font/futura_medium"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="25sp"  />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/title"
+                    app:layout_constraintBottom_toBottomOf="@+id/title"
+                    android:contentDescription="@null"
+                    android:id="@+id/genderLogo"
+                    android:src="@drawable/woman_128" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:id="@+id/rv"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/row_item_salon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No result found"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_margin="50dp"
+                android:id="@+id/noData"
+                />
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:indeterminateTint="@color/black"
+                android:layout_gravity="center"
+                android:layout_margin="50dp"
+                android:id="@+id/pb" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
