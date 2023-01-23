@@ -38,7 +38,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAIxoAO7WjIReHiA_vYbP43dt85vAFG3Zs" />
+            android:value="<Map API>" />
 
         <service
             android:name=".notifications.FirebaseMessagingService"
